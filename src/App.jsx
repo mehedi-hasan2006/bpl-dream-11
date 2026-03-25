@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <Navbar></Navbar>
-      {/* <Hero></Hero> */}
+      <Hero></Hero>
       <Player></Player>
 
 

@@ -15,12 +15,9 @@ function Player({ player }) {
 
   return (
     <div>
-      <div className="card bg-base-100 w-96 shadow-sm">
+      <div className="card bg-base-100 dark:bg-gray-800 shadow-sm">
         <figure>
-          <img
-            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-            alt="{name}"
-          />
+          <img className="w-[300px] h-[168px]" src={img} alt={name} />
         </figure>
         <div className="card-body">
           <h2 className="card-title">
@@ -32,14 +29,33 @@ function Player({ player }) {
               <Flag size={20} /> {country}
             </div>
             <div>
-              <button className="btn"> {type} </button>
+              <button className="btn dark:bg-gray-700 "> {type} </button>
             </div>
           </div>
           <div className="divider"></div>
-          <div>
-            <div>
-                <p className="font-semibold" >Rating:  </p>
-                <p> {rating} </p>
+          <div className="space-y-2">
+            <div className="flex justify-between">
+              <p className="font-semibold">Rating: </p>
+              <p className="text-right"> {rating} </p>
+            </div>
+            <div className="flex justify-between">
+              <p className="font-semibold">Bating Style: </p>
+              <p className="text-right"> {battingStyle} </p>
+            </div>
+            <div className="flex justify-between">
+              <p className="font-semibold">Bowling Style: </p>
+              <p className="text-right"> {bowlingStyle} </p>
+            </div>
+            <div className="flex justify-between items-center">
+              <div className="flex gap-2">
+                <p className="font-semibold">Price: </p>
+                <p className="text-right"> ${price} </p>
+              </div>
+              <div>
+                <button className="btn bg-transparent dark:bg-gray-600">
+                  Choose Player
+                </button>
+              </div>
             </div>
           </div>
         </div>

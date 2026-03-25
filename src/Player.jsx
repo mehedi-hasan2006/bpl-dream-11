@@ -4,7 +4,7 @@ const Player = () => {
   const [active, setActive] = useState("available");
 
   return (
-    <div className="mt-5 flex gap-3 justify-between items-center mb-10 px-3">
+    <div className="container mx-auto mt-5 flex gap-3 justify-between items-center mb-10 px-3">
       {active === "available" && <p className="font-bold text-[28px]">Available Players</p>}
       {active === "selected" && <p className="font-bold text-[28px]">Selected Players</p>}
       <div className="flex-col  md:flex-row">

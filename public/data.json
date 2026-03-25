@@ -8,7 +8,7 @@
     "type": "All-Rounder",
     "bowlingStyle": "Right-arm medium",
     "battingStyle": "Right-hand bat",
-    "img": "https://example.com/images/virat-kohli.jpg"
+    "img": "https://i.ibb.co.com/9m0J0Lr2/download.jpg"
   },
   {
     "id": 2,
@@ -19,7 +19,7 @@
     "type": "All-Rounder",
     "bowlingStyle": "Right-arm off break",
     "battingStyle": "Right-hand bat",
-    "img": "https://example.com/images/babar-azam.jpg"
+    "img": "https://i.ibb.co.com/gLXWmNpg/download-1.jpg"
   },
   {
     "id": 3,
@@ -30,7 +30,7 @@
     "type": "All-Rounder",
     "bowlingStyle": "Right-arm off break",
     "battingStyle": "Right-hand bat",
-    "img": "https://example.com/images/joe-root.jpg"
+    "img": "https://i.ibb.co.com/FLdktvbT/download-2.jpg"
   },
   {
     "id": 4,
@@ -41,7 +41,7 @@
     "type": "All-Rounder",
     "bowlingStyle": "Right-arm off break",
     "battingStyle": "Right-hand bat",
-    "img": "https://example.com/images/kane-williamson.jpg"
+    "img": "https://i.ibb.co.com/W4w9sjqn/download-3.jpg"
   },
   {
     "id": 5,
@@ -52,7 +52,7 @@
     "type": "All-Rounder",
     "bowlingStyle": "Right-arm leg break",
     "battingStyle": "Right-hand bat",
-    "img": "https://example.com/images/steve-smith.jpg"
+    "img": "https://i.ibb.co.com/BKYr6W8B/download-4.jpg"
   },
   {
     "id": 6,
@@ -63,6 +63,6 @@
     "type": "All-Rounder",
     "bowlingStyle": "Left-arm orthodox",
     "battingStyle": "Left-hand bat",
-    "img": "https://example.com/images/shakib.jpg"
+    "img": "https://i.ibb.co.com/4RVZKCVC/download-5.jpg"
   }
 ]

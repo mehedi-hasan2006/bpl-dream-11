@@ -1,6 +1,3 @@
-import { Menu, X } from "lucide-react";
-import { useState } from "react";
-
 const navbar = [
   {
     id: 1,
@@ -27,7 +24,7 @@ const navbar = [
 const navLinks = navbar.map((nav) => (
   <li className="mr-5" key={nav.id}>
     <a
-      className="text-[#13131395] font-semibold hover:text-black"
+      className="text-[#13131395] dark:text-white font-semibold hover:text-black hover:bg-transparent dark:hover:text-white"
       href={nav.path}
     >
       {nav.name}
@@ -36,25 +33,46 @@ const navLinks = navbar.map((nav) => (
 ));
 
 const Navbar = () => {
-  const [open, setOpen] = useState(false);
   return (
-    <nav className="flex justify-between items-center mt-3 mx-3">
-      {/* logo */}
-      <div>
-        <img src="/src/assets/logo.png" alt="" />
-      </div>
-      {/* menu and coins */}
-      <div className="flex">
-        <ul className="md:flex items-center hidden ">{navLinks}</ul>
-
-        <button className="btn rounded-lg">
-          0 Coin <img src="/src/assets/Currency.png" alt="" />
-        </button>
-        <div className="md:hidden ml-3" onClick={() => setOpen(!open)}>
-          {open ? <X></X> : <Menu></Menu>}
-          <ul 
-          className="md:hidden absolute right-00">
-            {navLinks}</ul>
+    <nav className="bg-base-100  shadow-sm">
+      <div className="container mx-auto navbar ">
+        <div className="navbar-start">
+          <div className="dropdown">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost  lg:hidden"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                {" "}
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />{" "}
+              </svg>
+            </div>
+            <ul
+              tabIndex="-1"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            >
+              {navLinks}
+            </ul>
+          </div>
+          <img src="/src/assets/logo.png" alt="" />
+        </div>
+        <div className="navbar-center hidden lg:flex">
+          <ul className="menu menu-horizontal px-1">{navLinks}</ul>
+        </div>
+        <div className="navbar-end">
+          <a className="btn"> 0 Coin</a>
         </div>
       </div>
     </nav>

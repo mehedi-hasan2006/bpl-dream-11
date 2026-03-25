@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <div className="mt-7 px-3">
+    <div className="container mx-auto mt-7 px-3">
       <div className="relative overflow-hidden rounded-3xl bg-black">
         <img
           className="w-full h-full object-cover"

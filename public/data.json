@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "Virat Kohli",
+    "country": "India",
+    "rating": 9.5,
+    "price": 12000,
+    "type": "All-Rounder",
+    "bowlingStyle": "Right-arm medium",
+    "battingStyle": "Right-hand bat",
+    "img": "https://example.com/images/virat-kohli.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Babar Azam",
+    "country": "Pakistan",
+    "rating": 9.3,
+    "price": 11000,
+    "type": "All-Rounder",
+    "bowlingStyle": "Right-arm off break",
+    "battingStyle": "Right-hand bat",
+    "img": "https://example.com/images/babar-azam.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Joe Root",
+    "country": "England",
+    "rating": 9.1,
+    "price": 10000,
+    "type": "All-Rounder",
+    "bowlingStyle": "Right-arm off break",
+    "battingStyle": "Right-hand bat",
+    "img": "https://example.com/images/joe-root.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Kane Williamson",
+    "country": "New Zealand",
+    "rating": 9.0,
+    "price": 95000,
+    "type": "All-Rounder",
+    "bowlingStyle": "Right-arm off break",
+    "battingStyle": "Right-hand bat",
+    "img": "https://example.com/images/kane-williamson.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Steve Smith",
+    "country": "Australia",
+    "rating": 9.2,
+    "price": 10500,
+    "type": "All-Rounder",
+    "bowlingStyle": "Right-arm leg break",
+    "battingStyle": "Right-hand bat",
+    "img": "https://example.com/images/steve-smith.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Shakib Al Hasan",
+    "country": "Bangladesh",
+    "rating": 9.4,
+    "price": 11500,
+    "type": "All-Rounder",
+    "bowlingStyle": "Left-arm orthodox",
+    "battingStyle": "Left-hand bat",
+    "img": "https://example.com/images/shakib.jpg"
+  }
+]

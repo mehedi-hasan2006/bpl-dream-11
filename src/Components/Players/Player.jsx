@@ -1,7 +1,7 @@
 import { CircleUser, Flag } from "lucide-react";
-import React from "react";
+import { toast } from "react-toastify";
 
-function Player({ player }) {
+function Player({ player, setCoin, coin }) {
   const {
     name,
     rating,
@@ -13,11 +13,20 @@ function Player({ player }) {
     type,
   } = player;
 
+  const choosePlayer = () => {
+    if (coin > price) {
+      setCoin(coin - price);
+      toast.success(`${name} is added`);
+    } else {
+      toast.error("Insuficient Coins!");
+    }
+  };
+
   return (
     <div>
       <div className="card bg-base-100 dark:bg-gray-800 shadow-sm">
         <figure>
-          <img className="w-[300px] h-[168px]" src={img} alt={name} />
+          <img className="w-75 h-42" src={img} alt={name} />
         </figure>
         <div className="card-body">
           <h2 className="card-title">
@@ -52,7 +61,10 @@ function Player({ player }) {
                 <p className="text-right"> ${price} </p>
               </div>
               <div>
-                <button className="btn bg-transparent dark:bg-gray-600">
+                <button
+                  onClick={choosePlayer}
+                  className="btn bg-transparent dark:bg-gray-600"
+                >
                   Choose Player
                 </button>
               </div>

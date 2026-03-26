@@ -1,3 +1,5 @@
+import CurrencyImg from "../../src/assets/Currency.png";
+
 const navbar = [
   {
     id: 1,
@@ -32,7 +34,7 @@ const navLinks = navbar.map((nav) => (
   </li>
 ));
 
-const Navbar = () => {
+const Navbar = ({ coin }) => {
   return (
     <nav className="bg-base-100  shadow-sm">
       <div className="container mx-auto navbar ">
@@ -72,7 +74,11 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{navLinks}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn"> 0 Coin</a>
+          <a className="btn">
+            {" "}
+            {coin} Coin
+            <img src={CurrencyImg} alt="" />
+          </a>
         </div>
       </div>
     </nav>

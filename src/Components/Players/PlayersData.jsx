@@ -1,14 +1,13 @@
 import { use } from "react";
 import Player from "./Player";
 
-function PlayersData({ playersDataPromise }) {
+function PlayersData({ playersDataPromise, setCoin, coin }) {
   const playersData = use(playersDataPromise);
-  console.log(playersData);
 
   return (
     <div className="container mx-auto grid md:grid-cols-2 xl:grid-cols-3 gap-6">
       {playersData.map((player) => (
-        <Player key={player.id} player={player}></Player>
+        <Player key={player.id} player={player} setCoin={setCoin} coin ={coin} ></Player>
       ))}
     </div>
   );

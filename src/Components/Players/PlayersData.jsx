@@ -26,7 +26,7 @@ function PlayersData({ playersDataPromise, setCoin, coin, active, selectedCarts,
           
         </div>
       ) : (
-        <SelectedPlayers selectedCarts= {selectedCarts}></SelectedPlayers>
+        <SelectedPlayers selectedCarts= {selectedCarts} setSelectedCarts= {setSelectedCarts} coin={coin} setCoin={setCoin}></SelectedPlayers>
       )}
     </div>
   );

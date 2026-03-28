@@ -20,14 +20,16 @@ function Player({ player, setCoin, coin, selectedCarts, setSelectedCarts }) {
   const choosePlayer = () => {
     setIsSelected(true);
 
-    setSelectedCarts([...selectedCarts, player])
+    
 
     if (coin > price) {
       setCoin(coin - price);
       toast.success(`${name} is added`);
     } else {
       toast.error("Insuficient Coins!");
+      return
     }
+    setSelectedCarts([...selectedCarts, player])
   };
 
   return (

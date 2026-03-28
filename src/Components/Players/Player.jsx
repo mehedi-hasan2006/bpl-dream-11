@@ -1,7 +1,8 @@
 import { CircleUser, Flag } from "lucide-react";
+import { useState } from "react";
 import { toast } from "react-toastify";
 
-function Player({ player, setCoin, coin }) {
+function Player({ player, setCoin, coin, selectedCarts, setSelectedCarts }) {
   const {
     name,
     rating,
@@ -13,7 +14,14 @@ function Player({ player, setCoin, coin }) {
     type,
   } = player;
 
+
+  const [isSelected, setIsSelected] = useState(false);
+
   const choosePlayer = () => {
+    setIsSelected(true);
+
+    setSelectedCarts([...selectedCarts, player])
+
     if (coin > price) {
       setCoin(coin - price);
       toast.success(`${name} is added`);
@@ -63,9 +71,10 @@ function Player({ player, setCoin, coin }) {
               <div>
                 <button
                   onClick={choosePlayer}
-                  className="btn bg-transparent dark:bg-gray-600"
+                  className="btn bg-transparent dark:bg-gray-600  " 
+                  disabled={isSelected}
                 >
-                  Choose Player
+                  {isSelected === true ? "Selected" : "Choose Player"}
                 </button>
               </div>
             </div>

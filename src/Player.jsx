@@ -1,12 +1,11 @@
-import { useState } from "react";
 
-const Player = () => {
-  const [active, setActive] = useState("available");
+const Player = ({active, setActive, selectedCarts, totalPlayers}) => {
+  
 
   return (
     <div className="container mx-auto mt-5 flex gap-3 justify-between items-center mb-10 px-3">
       {active === "available" && <p className="font-bold text-[28px]">Available Players</p>}
-      {active === "selected" && <p className="font-bold text-[28px]">Selected Players</p>}
+      {active === "selected" && <p className="font-bold text-[28px]">Selected Players ( {selectedCarts.length} / {totalPlayers} ) </p>}
       <div className="flex-col  md:flex-row">
         <button
           onClick={() => setActive("available")}
@@ -18,7 +17,7 @@ const Player = () => {
           onClick={() => setActive("selected")}
           className={`btn  mt-2 ${active === "selected" ? "bg-amber-200 font-semibold" : "bg-gray-200"}`}
         >
-          Selected (0)
+          Selected ({selectedCarts.length})
         </button>
       </div>
     </div>

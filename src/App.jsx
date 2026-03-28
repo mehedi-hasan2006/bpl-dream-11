@@ -7,19 +7,31 @@ import { ToastContainer } from "react-toastify";
 
 const playersDataPromise = fetch("/data.json").then((res) => res.json());
 
+
 function App() {
   const [coin, setCoin] = useState(50000);
+  const [active, setActive] = useState("available");
+  const [selectedCarts, setSelectedCarts] = useState([]);
+  const [totalPlayers, setTotalPlayers] = useState(0);
+
+
+ 
+
   return (
     <>
       <Navbar coin={coin}></Navbar>
       {/* <Hero></Hero> */}
-      <Player></Player>
+      <Player active={active} setActive={setActive} selectedCarts={selectedCarts} totalPlayers={totalPlayers}></Player>
 
       <Suspense fallback={<p className=" loading loading-dots loading-xl"></p>}>
         <PlayersData
           playersDataPromise={playersDataPromise}
           setCoin={setCoin}
           coin={coin}
+          active={active}
+          selectedCarts={selectedCarts}
+          setSelectedCarts={setSelectedCarts}
+          setTotalPlayers={setTotalPlayers}
         ></PlayersData>
       </Suspense>
 
